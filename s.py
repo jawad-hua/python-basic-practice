@@ -147,18 +147,45 @@
 # uni=input() 
 # print(f"My name is {name} and i am in {edu} with {cgp}GPA in {uni}")
 
-name="Muhammad Jawad"
-age=20
-Degree="BS IT"
-Semester=6
-gpa=3.4
-print(f"my name is {name} and i am {age} years old. i am studying {Degree} in {Semester} semester.my gpa is {gpa}")
-subject5th=["database","information security","theory of autometa", "financial accounting","ai","virtual system and services"]
-grades=["A","B","A","C","B","B"]
-print("the result of 5th semester with grades")
-for i in  range(len(subject5th)):
-    print(subject5th[i],":",grades[i])
-subjects6th=["web tecnologies","Machine Learning","IT Infrastructure","Introduction to Management","enterprise System","Network security","civic and cumininty management"]
-print("this semester", len(subjects6th),"subject which are given below")
-for subject in subjects6th:
-    print(subject)
+# name="Muhammad Jawad"
+# age=20
+# Degree="BS IT"
+# Semester=6
+# gpa=3.4
+# print(f"my name is {name} and i am {age} years old. i am studying {Degree} in {Semester} semester.my gpa is {gpa}")
+# subject5th=["database","information security","theory of autometa", "financial accounting","ai","virtual system and services"]
+# grades=["A","B","A","C","B","B"]
+# print("the result of 5th semester with grades")
+# for i in  range(len(subject5th)):
+#     print(subject5th[i],":",grades[i])
+# subjects6th=["web tecnologies","Machine Learning","IT Infrastructure","Introduction to Management","enterprise System","Network security","civic and cumininty management"]
+# print("this semester", len(subjects6th),"subject which are given below")
+# for subject in subjects6th:
+#     print(subject)
+
+
+
+semes = int(input("enter semester number:"))
+cgpa = float(input("enter CGPA:"))
+
+subjects = []
+grades = []
+
+num_sub = int(input("number of subjects: "))
+
+if num_sub > 6:
+    print("only enter maximum 6 subjects.")
+else:
+    for i in range(num_sub):
+        subject= input(f"enter name of subject {i+1}: ")
+        grade = input(f"enter grade of {subject}: ")
+        subjects.append(subject)
+        grades.append(grade)
+
+# Results
+    print("semester:", semes)
+    print("CGPA:", cgpa)
+   
+    
+    for i in range(num_sub):
+        print(subjects[i], ":", grades[i])
