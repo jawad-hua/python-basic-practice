@@ -186,6 +186,5 @@ else:
     print("semester:", semes)
     print("CGPA:", cgpa)
    
-    
     for i in range(num_sub):
         print(subjects[i], ":", grades[i])
